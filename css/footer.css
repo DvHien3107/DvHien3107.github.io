@@ -1,0 +1,67 @@
+.mobile-footer .line {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: auto;
+    height: 5px;
+    text-indent: -9999rem;
+    transform: translateX(-50%);
+    border-radius: 2.5px;
+    background: currentColor;
+    transition: left 0.5s ease-out;
+    z-index: 10;
+}
+
+.mobile-footer a {
+    position: relative;
+    overflow: hidden;
+    width: 33.33%;
+    height: 100%;
+    display: inline-block;
+    float: left;
+    padding: 0;
+    color: currentColor;
+    line-height: 12;
+    font-size: 0.725em;
+    text-align: center;
+    text-decoration: none;
+    text-indent: -9999rem;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    will-change: background, line-height;
+    transition: background 0.15s ease-in-out, line-height 0.2s ease 0.2s;
+}
+
+.mobile-footer {
+    position: relative;
+    width: 25rem;
+    height: 5rem;
+    color: var(--text-color);
+    font-size: 1rem;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+    padding: 0;
+    background: var(--background-color);
+    overflow: hidden;
+}
+
+nav.mobile-footer ion-icon {
+    position: absolute;
+    fill: currentColor;
+    top: calc(30% + 2.5px);
+    left: 30%;
+    width: 40%;
+    height: 40%;
+    transform: scale(1);
+    transform-origin: center;
+    will-change: opacity, transform, top;
+    transition: opacity 0.2s ease, transform 0.2s ease, top 0.2s ease;
+    opacity: 0.4;
+    pointer-events: none;
+}
+
+.mobile-footer a.active {
+    background-color: rgba(128, 128, 128, 0.15);
+    text-indent: 0;
+    line-height: 10;
+    transition-delay: 0s, 0s, 0s;
+}

@@ -1,0 +1,135 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Title -->
+    <title>Todo</title>
+    <!-- Favicon -->
+    <link rel="icon" href="./img/logo/logo.png">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="./css/style.css">
+
+</head>
+
+<body data-new-gr-c-s-check-loaded="14.1209.0" data-gr-ext-installed="" class="">
+    <!-- Preloader -->
+
+    <!-- /Preloader -->
+    <div class="container">
+        <button id="theme-toggle"><ion-icon name="moon-outline"></ion-icon></button>
+        <div id="task" class="app-container active">
+            <h1>Task việc</h1>
+
+            <form id="task-form">
+                <input type="text" id="task-input" placeholder="Add a new task" required>
+
+                <button type="submit" id="add-btn">Add</button>
+                <!-- <button type="button" id="reset-btn">Reset</button> -->
+
+            </form>
+            <ul id="task-list" class="task-list"></ul>
+        </div>
+        <div id="cycle" class="app-container">
+            <h1>Chu kì</h1>
+            <div class="cycle-container">
+                <div class="cycle-item">
+                    <div class="cycle-item-content">
+                        <div class="cycle-item-content-left">
+                            <p>Nhập kỳ gần nhất:</p>
+                            <input type="date" id="startDate" />
+                            <button onclick="calculateDays()">Đếm ngược</button>
+                            <div id="app">
+                                <div class="base-timer">
+                                    <svg class="base-timer__svg" viewBox="0 0 100 100"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g class="base-timer__circle">
+                                            <circle class="base-timer__path-elapsed" cx="50" cy="50" r="45"></circle>
+                                            <path id="base-timer-path-remaining" stroke-dasharray="283"
+                                                class="base-timer__path-remaining arc" d="
+                                               M 50, 50
+                                               m -45, 0
+                                               a 45,45 0 1,0 90,0
+                                               a 45,45 0 1,0 -90,0
+                                               "></path>
+                                        </g>
+                                    </svg>
+                                    <span id="resultCycle" class="base-timer__label">
+
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="count-day" class="app-container">
+            <h1>Đếm ngày</h1>
+            <div class="count-day-container">
+                <form id="count-form">
+                    <input type="text" id="count-input" placeholder="Thêm ngày kỷ niệm" required>
+                    <input type="date" id="count-date-input"  value="" required style="border-radius: 0;"> 
+                    <button type="submit" id="add-count-btn">Add</button>
+                    <!-- <button type="button" id="reset-btn">Reset</button> -->
+    
+                </form>
+                <ul id="count-task-list" class="task-list"></ul>
+            </div>
+        </div>
+
+        <!-- Footer Area Start -->
+        <footer class="footer-area">
+            <div class="foot-container">
+                <nav class="mobile-footer" role="menulist">
+                    <a href="#!" data-id="task" role="menuitem" class="active" aria-describedby="nav-current">
+                        <ion-icon name="time-outline"></ion-icon> Task việc
+                    </a>
+                    <a href="#!" data-id="cycle" role="menuitem">
+                        <ion-icon name="timer-outline"></ion-icon> Chu kì
+                    </a>
+                    <a href="#!" data-id="count-day" role="menuitem">
+                        <ion-icon name="hourglass-outline"></ion-icon> Đếm Ngày
+                    </a>
+                    <i class="line" id="nav-current">current item</i>
+                </nav>
+            </div>
+        </footer>
+        <!-- Footer Area End -->
+    </div>
+
+
+
+
+    <div id="jsLib">
+
+    </div>
+    <!-- **** All JS Files ***** -->
+    <!-- jQuery 2.2.4 -->
+    <!-- Active -->
+    <script src="js/importJsLib.js"></script>
+
+    <script src="js/lib/jquery.min.js"></script>
+    <script src="js/lib/bootstrap.min.js"></script>
+    <script src="js/lib/handlebars.js"></script>
+    <script src="js/lib/moment.min.js"></script>
+    <script src="js/lib/Sortable.min.js"></script>
+    <script src="js/lib/sweetalert2.js"></script>
+    <script src="js/lib/moment-timezone-with-data.min.js"></script>
+
+    <script src="js/footer.js"></script>
+    <script src="js/layout.js"></script>
+    <script src="js/active.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script type="module" src="js/firebase.js"></script>
+
+</body>
+
+
+
+</html>
