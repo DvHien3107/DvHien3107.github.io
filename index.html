@@ -5,6 +5,7 @@
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
 
     <!-- Title -->
     <title>Todo</title>
@@ -141,7 +142,12 @@
             });
         });
         
-        element.webkitRequestFullScreen(); 
+        if (document.webkitFullscreenElement) {
+            document.webkitCancelFullScreen();
+        } else {
+            const el = document.documentElement;
+            el.webkitRequestFullscreen(Element.ALLOW_KEYBOARD_INPUT);
+        }
     </script>
     <script type="module" src="js/firebase.js"></script>
 
