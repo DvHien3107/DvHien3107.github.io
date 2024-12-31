@@ -2,7 +2,7 @@ function calculateDays() {
     let localStartDate = localStorage.getItem('startDate');
     const startDateInput =  document.getElementById('startDate').value || localStartDate;
     if (!startDateInput) {
-        document.getElementById('result').textContent = 'Vui lòng nhập một ngày hợp lệ!';
+        $('#resultCycle').html(`Chưa Set`);
         return;
     } else {
 
