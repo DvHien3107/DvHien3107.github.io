@@ -34,7 +34,7 @@
 
 .mobile-footer {
     position: relative;
-    width: 25rem;
+    width: 100svw;
     height: 5rem;
     color: var(--text-color);
     font-size: 1rem;
